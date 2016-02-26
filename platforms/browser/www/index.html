@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+
+<head>
+ 
+    
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+    <meta content='user-scalable=no, initial-scale=1, width=device-width' id='viewport' name='viewport'>
+
+    
+<meta charset="utf-8" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="msapplication-tap-highlight" content="no" />
+<!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+
+
+<title>FaSeP</title>
+<!---Cargar Estilos de aplicacion------------------>
+<link rel="stylesheet" href="css/style.css" />
+   
+<script type="text/javascript" src="cordova.js"></script>
+<!---Carga de fastclick-->
+		<script type="application/javascript" src="js/fc/lib/fastclick.js"></script>
+        <!---Cargar JQuery Mobile------------------------->
+        <link rel="stylesheet" href="jq/jquery.mobile-1.4.3.min.css" />
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+        <script src="jq/jquery-2.1.1.min.js"></script>
+        <script src="jq/jquery.mobile-1.4.3.min.js"></script>
+        <!---Cargando API Google Maps--------------------->
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+        <!---Cargando Aplicación GPS-------------------->
+        <script src="js/GPS.js"></script>
+	    <script src="js/Enviar.js"></script>
+        <!---Cargaando validators--->
+	<script type="text/javascript">
+		document.write( '<style>#pie{opacity: 0;}@media(min-height:' + ($( window ).height() - 10) + 'px){#pie{opacity: 100;}}</style>' );
+        var viewPortScale = 1 / window.devicePixelRatio;
+
+        $('#viewport').attr('content', 'user-scalable=no, initial-scale='+viewPortScale+', width=device-width');
+    </script>
+    <script type="text/javascript" src="js/jquery.ui.map.full.min.js"></script>
+    <script src="GCluster/src/markerclusterer.js"></script>
+
+
+    </head>
+    
+    <body class="app">
+    	<div data-role="page" id="map-page" data-url="map-page">
+        	<div data-role="header" hidden="true">
+            <input type="text" hidden="true" id="fallas1" value=""/>
+            <input type="text" hidden="true" id="Lugar1" value=""/>
+            <input type="text" hidden="true" id="Punto" value=""/>
+            <input type="text" hidden="true" id="LatY" value=""/>
+            <input type="text" hidden="true" id="LongX" value=""/>
+            <input type="text" hidden="true" id="Nombre1" value=""/>
+            <input type="text" hidden="true" id="email1" value=""/>
+              <img style="width:640px; height:480px; visibility:hidden;display:none;" id="imagen_camara" src="" /> 
+			 <textarea id="put_geojson_string_here"></textarea>
+            </div>
+            <!--Mapa----->
+<div id="map-canvas"> </div>
+
+<!--Fin Mapa--> 
+
+<!--Se agrega el PopUp de confirmacion--->
+<div data-role="popup" id="myPopupDialog" data-theme="a" class="ui-corner-all" data-overlay-theme="b">
+  <form>
+    <div style="padding:10px 20px;">
+      <h2 style="text-align:center;">Atención</h2>
+      <p style="text-align:justify; font-size:1.5em;"> La aplicación usará la <span style="color:#F60">Ubicación</span> de su dispositivo en caso de no tener habilitada la opción el marcador
+        <input type="image" src="css/img/location-black.png">
+        se creara en una posición <span style="font-style:italic;">“default”</span> y podrá desplazarlo hasta la posición donde desee registrar el <span style="color:#F60">“reporte”</span> </p>
+      <a id="btnaddmarker" style="font-size:120%;" class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-btn-icon-left ui-icon-check" data-rel="back">Aceptar</a> </div>
+  </form>
+</div>
+
+<!--Fin PopUp----------------------------> 
+
+<!--Pie de pagina--->
+<div data-role="footer" data-position="fixed" id="pie">
+  <div href="#myPopupDialog" class="round-button">
+    <div href="#myPopupDialog" class="round-button-circle text-center"  > 
+    <br><a href="#myPopupDialog" data-rel="popup" data-position-to="window" data-transition="pop" class="btn btn-warning btn-circle btn-lg"><i class="glyphicon glyphicon-map-marker"></i></a>
+  <!--  <a href="#myPopupDialog" data-rel="popup" data-position-to="window" class="round-button" data-transition="pop"> <img class="is" src="css/img/Blanco.png"> </a> --></div>
+  </div>
+</div>
+<!--Fin Pie de pagina--->
+</div>
+</body></html>

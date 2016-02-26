@@ -1,0 +1,174 @@
+@charset "utf-8";
+@font-face
+{
+	font-family: fuente1;
+	src: url("fonts/jaapokki-regular.woff");
+}
+
+
+#map-canvas
+{
+	bottom: -10% !important;
+	height: 100%;
+	left: 0px !important;
+	padding: 0;
+	position: absolute !important;
+	righ: 0px;
+	top: 0%;
+	width: 100%;
+}
+#pie
+{
+	background-image: linear-gradient(top, #ff940a, #f0aa4f);
+	display: block;
+	height: 14%;
+	position: fixed;
+}
+.btn-lg.btn-circle {
+margin-top: 0.10em;
+  width: 20%;
+  height: 100%;
+  padding: 2.5% 5%;
+
+  /*line-height: 1.33;*/
+  border-radius: 25px;
+  color:#FFFFFF;
+  font-size:200%;
+  border: 5px solid #F9F9F9;
+  
+ /* margin-left:40%;*/
+}
+/*.round-button
+{
+	display: block;
+	margin: auto;
+	margin-top: 5%;
+	position: static;
+	width: 20%;
+}
+.round-button-circle
+{
+	background: #FF5700;
+	border: 10px solid #FBFBFB;
+	border-radius: 50%;
+	box-shadow: 0 0 3px gray;
+	height: 0;
+	overflow: hidden;
+	padding-bottom: 100%;
+	width: 100%;
+}
+.round-button-circle:hover
+{
+	background: #C02F00;
+}
+.round-button a
+{
+	display: block;
+	float: left;
+	line-height: 1em;
+	padding-bottom: 50%;
+	padding-top: 50%;
+	text-align: center;
+	width: 100%;
+}*/
+.is
+{
+	display: inline;
+	height: 90%;
+	line-height: 1em;
+	margin-top: -50%;
+	width: 100%;
+}
+.infow
+{
+	background-color: #FF9934;
+	border-radius: 11px;
+	color: rgba(255,108,8,1.00);
+	font-family: fuente1;
+	font-size: 140%;
+	opacity: 1.0;
+	width: 27em;
+}
+.cabeza
+{
+	color: #FFFFFF;
+}
+.center
+{
+	margin-left: auto;
+	margin-right: auto;
+}
+#btnaddmarker
+{
+	background-color: #F60;
+	border: 2px solid #d47404;
+	border-radius: 3px;
+	box-shadow: 0px 0px 2px #000000;
+	opacity: 0.95;
+}
+.dpace
+{
+	visibility: hidden;
+}
+input.error
+{
+	background: red;
+	color: white;
+}
+label.error
+{
+	color: red;
+}
+.contenedor
+{
+	background-image: url("img/fondo.png");
+	color: rgba(255,255,255,0.00);
+}
+.cajas
+{
+	border-color: rgba(255,108,8,1.00);
+	border-radius: 7px;
+	color: rgba(255,108,8,1.00);
+	font-family: fuente1;
+}
+.cajas1
+{
+	border-color: rgba(255,108,8,1.00);
+	color: rgba(255,108,8,1.00);
+	font-family: fuente1;
+}
+.cajas2
+{
+	border-color: rgba(255,108,8,1.00);
+}
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px)
+{
+	.app
+	{
+		background-position: center;
+		margin: -90px 0px 0px -198px;
+		padding: 75px 0px 75px 170px;
+		
+	}
+}
+#infoBox
+{
+	background-color: #ffa024;
+	border: 2px solid #f5ffc4;
+	border-radius: 11px;
+	box-shadow: 0px 0px 3px #000000;
+	color: #FFFFFF;
+	opacity: 0.8;
+	text-align: center;
+	width: 20em;
+}
+img
+{
+	height: 50%;
+	width: 50%;
+}
+.fuente{
+font-size: 1.5wm;
+}
+
+	
